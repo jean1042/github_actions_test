@@ -1,0 +1,20 @@
+name: Hello world
+
+on: #github action event type (push, pull_request 등등이 있음)
+  push:
+    branches: [ master ]
+
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+     
+      - name: Run pwd #step의 이름
+        run: pwd  #실제 동작하는 코드
+
+      # Runs a set of commands using the runners shell
+      - name: Run ls -al
+        run: ls -al
